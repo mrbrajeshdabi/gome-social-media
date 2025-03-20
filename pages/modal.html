@@ -1,0 +1,107 @@
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">modal</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-info" id="exampleModalLabel">Notification</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="notmsg"></p>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="redbox"></div>
+     <div class="uploadbox">
+     <center> <div class="uploadpicbox img">
+      <i class="fa fa-plus-circle" id="plusicon"></i>
+     </div></center>
+     <textarea id="picstatus" name="picstatus" placeholder="Type Your Status" cols="10" rows="6"></textarea>
+     <button id="uploadpicbtn" type="button" unique_id="12345678">Upload</button>
+     </div>
+
+
+     $("#plusicon").click(function(){
+      var file = document.createElement("INPUT");
+      file.setAttribute("type","file");
+      file.click();
+      $(file).on("change",function(){
+          var reader = new FileReader();
+          reader.readAsDataURL(this.files[0]);
+          $(reader).on("load",function(){
+              const url  = this.result;
+              const img = document.createElement("IMG");
+              img.setAttribute("src",url);
+              img.setAttribute("class","uploadimg");
+              img.setAttribute("name","uploadimg");
+              img.setAttribute("accept","image/*");
+              $("#plusicon").addClass("d-none");
+              $(".redbox").addClass("d-none");
+              $(".uploadpicbox").append(img);
+              $("#uploadpicbtn").css("background-image","linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%)");
+              
+              // ---------------upload btn -----------------
+              $("#uploadpicbtn").click(function(){
+                  //check img not empty
+                  const status = $("#picstatus").val();
+                  if(url.value != "")
+                  {
+                      $.ajax({
+                          type:"POST",
+                          url:"php/post.php",
+                          data:{
+                              url:url,
+                              status:status,
+                          },
+                          success:function(response)
+                          {
+                             console.log(response);
+                              var obj = JSON.parse(response);
+                              console.log(obj)
+                              if(obj.status == 200 && obj.msg == "post_success")
+                              {
+                                  $("uploadpostmodalbtn").removeClass("d-none");
+                                  $(".uploadpostmodalbtn").click();
+                                  $(".uploadmsg").addClass("alert alert-success");
+                                  $(".uploadmsg").html("Post Uploaded <i class='fa fa-check-circle text-info'></i>");
+                                  setTimeout(() => {
+                                      $(".uploadmsg").removeClass("alert alert-success");
+                                      $(".uploadmsg").html("");
+                                      $("#closebtn").click();
+                                      $("#home").click();
+                                      
+                                  }, 3000);
+                              }
+                              else
+                              {
+                                  $("uploadpostmodalbtn").removeClass("d-none");
+                                  $(".uploadpostmodalbtn").click();
+                                  $(".uploadmsg").addClass("alert alert-warning");
+                                  $(".uploadmsg").html(obj.msg);
+                                  setTimeout(() => {
+                                      $(".uploadmsg").addClass("alert alert-warning");
+                                      $(".uploadmsg").html("");
+                                      $("#closebtn").click();
+                                      $("#home").click();
+                                  }, 3000);
+                              }
+                              
+                          }
+                      })
+                  }
+                  else
+                  {
+                      console.log("empty");
+                  }
+              })
+          })
+      })
+     })

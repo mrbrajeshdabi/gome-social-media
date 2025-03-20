@@ -1,0 +1,71 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0.1);
+}
+#tables{
+  background-color: rgba(5,0,0,0.1);
+  backdrop-filter: blur(100px);
+}
+#profileshow{
+  background-color: rgba(0,0,0,0.1);
+  backdrop-filter: blur(50px);
+  z-index: 10000000000000000000;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  transform: translate(-50% -50%);
+  width: 90%;
+}
+#changepasscollapse{
+  background-color: rgba(0,0,0,0.1);
+  backdrop-filter: blur(50px);
+  z-index: 10000000000000000000;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  transform: translate(-50% -50%);
+  width: 90%;
+}
+#pupdation{
+  background-color: rgba(0,0,0,0.1);
+  backdrop-filter: blur(100px);
+  z-index: 10000000000000000000;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  transform: translate(-50% -50%);
+  width: 90%;
+}
+#table{
+  background-color: none;
+  width: 100%;
+  height: auto;
+  color: black;
+  backdrop-filter: blur(0px);
+  padding: 0px;
+  margin: 0px;
+}
+td{
+  background-color: none;
+  margin: 0;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.tr1{
+  margin-bottom: 10px;
+}
+.accountcenterbtn{
+ height: 50px;
+ border: none;
+ backdrop-filter: blur(120px);
+ background-color: rgba(0,0,0,0.1);
+ color: black;
+}

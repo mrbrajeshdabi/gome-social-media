@@ -1,0 +1,97 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+.leftbox{
+  width: 100px;
+  height: 200px;
+  background-color: rgba(20,255,255,0.9);
+  transform: translate(-50% -50%);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border-radius: 10px;
+}
+.upload_frm{
+  width: 300px;
+  height: auto;
+  background-color: rgba(0,0,0,0.1);
+  margin: 60px auto 0px;
+  backdrop-filter: blur(50px);
+  
+}
+.picbox{
+  width:100%;
+  height: auto;
+  background-color:rgba(250,250,250,0.1);
+  opacity: 0.9;
+}
+#upload_img{
+  width: 99%;
+  height: 350px;
+  border: none;
+}
+#uploadpic{
+  padding: 1rem;
+}
+#uploadicon{
+  font-size: 6rem;
+  position: absolute;
+  top: 25%;
+  left: 37%;
+}
+
+#audio{
+  width: 0px;
+  opacity: 0.9;
+  height: 0px;
+}
+#uploadsong{
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  margin-left: 0px;
+  opacity: 0.0;
+}
+
+#musicaddicon{
+  font-size: 5;
+  font-size: 40px;
+  position: absolute;
+  top: 460px;
+  left: 0.5rem;
+  z-index: 10000000000000000;
+}
+#posts,#reels{
+  width: 45%;
+  height: 30px;
+  border: none;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+.musiclistbox{
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  height: auto;
+  box-shadow: 0px 5px 10px #ddd;
+}
+#listaudio{
+  opacity: 0.0;
+}
+.leftbox{
+  height: 300px;
+  box-shadow: 0px 5px 10px #ccc;
+}
+.uploadpicnew{
+  width: 100%;
+  height: 100%;
+}
+
+
+  

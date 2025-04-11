@@ -27,11 +27,12 @@ $sql = $db->query("SELECT * FROM post LEFT JOIN users ON post.post_unique_id=use
                         <div class="publicuserdettail d-flex">
                             <img src='.$data['profilepic'].' id="postimg" class="ms-3 mt-2">
                             <p class="username ms-5 mt-3">'.$data['username'].'</p>
+                            <!--<i class="fa fa-user fs-3 ms-5 text-warning mt-3"></i>-->
                         </div>
                         <div class="userpostpic" url="'.$data['post_song'].'">
                             <img src="users/'.$data['post_unique_id'].'/'.$data['post_pic'].'" class="postimg2">
                         </div>
-                        <div class="publictools d-flex mb-3 mt-3">
+                        <div class="publictools mb-3 mt-3">
                         <i class="fa fa-thumbs-up likeorunlikebtn fs-3 text-light" type="like" pid='.$data['post_id'].'     id="likebtn_'.$data['post_id'].'">'.$data['post_like'].'</i>
                         <i class="fa fa-thumbs-down likeorunlikebtn fs-3 text-light" type="unlike" pid='.$data['post_id'].' id="dislikebtn_'.$data['post_id'].'">'.$data['post_unlike'].'</i>
                         <i class="fa fa-comment commentbtn fs-3 text-light"></i>

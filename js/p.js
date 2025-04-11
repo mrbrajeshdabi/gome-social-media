@@ -2,6 +2,7 @@ window.onload=function()
 {
     $("#home").click();
 }
+
 $(document).ready(function(){
     $(".menu").each(function(){
         $(this).click(function(){

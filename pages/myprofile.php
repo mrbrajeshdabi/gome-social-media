@@ -35,7 +35,7 @@ $unique_id = $_COOKIE['_aut_ui_'];
        <center>
        <div class="upff">
          <p class="post"><?php print_r(mysqli_num_rows($post));?></p>
-         <p class="follower"></p>
+         <p class="follower"><?php// print_r(mysqli_num_rows($sql3));?>0</p>
          <p class="following"><?php print_r(mysqli_num_rows($sql2));?></p>
        </div><hr>
      </center>

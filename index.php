@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php
-require("element/nav.php");
+//require("element/nav.php");
 ?>
     <div class="row p-0 m-0">
     <div class="col-md-3 p-0 m-0"></div>
@@ -21,7 +21,7 @@ require("element/nav.php");
     <!--<div class="leftbox"></div>-->
     <div class="centerbox"></div>
     <!---<div class="rightbox"></div>-->
-    <form class="signup_frm" autocomplete="off">
+    <form class="signup_frm animate__animated animate__bounceIn" autocomplete="off">
      <center><h1>Register Now </h1></center>
      <center class="mt-5 mb-2 d-none text"><span class="alert alert-warning text-center p-2  mb-0 msg"></span></center>
      <div class="form-group">
@@ -38,15 +38,16 @@ require("element/nav.php");
      </div>
      <div class="form-group">
        <label for="phone">Mobile Number</label>
-       <input type="phone" name="phone" id="phone" autocomplete="off">
+       <input type="number" name="phone" id="phone" autocomplete="off">
      </div>
      <div class="form-group">
        <label for="password">Password</label>
-       <input type="new-password" name="password" id="password" autocomplete="off">
+       <input type="password" name="password" id="password" autocomplete="off">
      </div>
      
      
      <center><button id="sbtn" type="submit" name="submit">Register</button></center>
+     <center><p>already have an account\<a href="login.php">Login</a></p></center>
      
    </form>
     </div>

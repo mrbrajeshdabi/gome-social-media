@@ -15,7 +15,7 @@ $(document).ready(function(){
         },
         success:function(response)
         {
-            $("#sbtn").html("");
+            //$("#sbtn").html("");
            let obj = JSON.parse(response);
            if(obj.status == 200)
            {

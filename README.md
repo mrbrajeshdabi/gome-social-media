@@ -1,22 +1,37 @@
-🚀 Build Social Media Project 🚀
+#🚀 Build Social Media Project 🚀
 -----------------------
-☄️ Language Used 
+
+-----------------
+☄️ Language Used
 📂 FrontEnd ✅ Html, Css, JavaScript, jQuery,Ajax
+
 📂 BackEnd ✅ Php
+
 📂 Database ✅ MySQL
 --------------------
-📂 Project Information 
+
+#📂 Project Information
+
 ✅ Register
+
 ✅ Login
-✅ Notification 
+
+✅ Notification
+
 ✅ Friends 
+
 ✅ Post
+
 ✅ Music
+
 ✅ Profile [You]
+
 ✅ Profile Settings 
+
 ✅ Logout
+
 --------
-📂Link Project And Web
+#📂Link Project And Web
 
 📂 web Link ✅ https://lnkd.in/ejkV-yrY
 
